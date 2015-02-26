@@ -13,7 +13,11 @@ If everything runs, the app prints all users to the console
 4. Create a Podfile with a reference to the liferay sdk
 5. Invoke "pod install" on the shell
 6. Open the created xCode workspace
-7. In the Project Setting in Section "Info" -> Configurations - make sure the root nodes "Debug" and "Release" have config file Prods.debug respectively Pods.release assigned
-8. Create a ObjectiveC Bridging Header and import the required LR Classes
-9. Reference your Bridging Header in your Project "Build Settings" (Make sure "All" is selected - search for "Bridgin"
-10. Code and Run
+7. Create a ObjectiveC Bridging Header and import the required LR Classes
+8. Reference your Bridging Header in your Project "Build Settings" (Make sure "All" is selected - search for "Bridgin"
+9. Code and Run
+
+If xCode wont find your bridging header files; make sure the "Header Search Paths" of your target include the following:
+- "${PODS_ROOT}/Headers/Public"
+- "${PODS_ROOT}/Headers/Public/Liferay-iOS-SDK"
+- "${PODS_ROOT}/Headers/Public/AFNetworking"
